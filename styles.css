@@ -17,7 +17,7 @@ h1 {
 }
 
 p {
-    font-size: 2rem;
+    font-size: 1rem;
     color: white;
 }
 
@@ -54,29 +54,27 @@ nav li a:hover {
     color: #7895B2;
 }
 
-/* MAIN */
-
-/* .main-image {
-    max-height: 1vh; 
-    overflow: hidden;
-} */
-
-.main-image img {
-    position: relative;
-    width: 100%;
-}
-
+/* SECTION CONFIGURATION */
 section {
     display: flex;
 }
 
-#home {
-    /* display: block; */
-    position:relative;
-    padding: 1rem;
+/* MAIN */
+/* Home Section */
+
+.banner {
+    position: relative;
+    margin: 1rem;
+}
+
+.banner img {
+    /* position: relative; */
+    width: 100%;
 }
 
 .main-text {
+    width: 100%;
+    top: 0;
     display: flex;
     position: absolute;
     background-color: #7895b24d;
@@ -97,6 +95,45 @@ section {
 
 .main-text p {
     color: #F5EFE6;
+}
+
+/* JEWELLERY */
+.products {
+    display: block;
+}
+
+.product-div {
+    float: left;
+    margin: 1rem;
+    padding: 1rem;
+    width: 25%;
+}
+
+.product-div:hover {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+#jewellery > div > h2 {
+    margin: 1rem;
+}
+
+#jewellery img {
+    display: block;
+    width: 100%;
+    height: 400px;
+}
+
+@media only screen and (max-width: 700px) {
+    .product-div {
+      width: 49.99999%;
+      margin: 6px 0;
+    }
+  }
+  
+@media only screen and (max-width: 500px) {
+    .product-div {
+      width: 100%;
+    }
 }
 
 
