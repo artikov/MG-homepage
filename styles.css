@@ -18,7 +18,7 @@ h1 {
 
 p {
     font-size: 2rem;
-    color: #7895B2;
+    color: white;
 }
 
 .logo {
@@ -26,13 +26,13 @@ p {
     margin-left: auto;
     margin-right: auto;
     width: 100%;
-    margin-bottom: 1rem;
 }
 
 /* navigation bar */
 nav {
     background-color: #E8DFCA;
     /* width: 100%; */
+    margin: 1rem;
 }
 
 nav ul {
@@ -54,17 +54,53 @@ nav li a:hover {
     color: #7895B2;
 }
 
-/* sections */
+/* MAIN */
+
+/* .main-image {
+    max-height: 1vh; 
+    overflow: hidden;
+} */
+
+.main-image img {
+    position: relative;
+    width: 100%;
+}
+
 section {
     display: flex;
 }
 
 #home {
-    display: block;
+    /* display: block; */
+    position:relative;
+    padding: 1rem;
+}
+
+.main-text {
+    display: flex;
+    position: absolute;
+    background-color: #7895b24d;
+}
+
+.left {
+    width: 50%;
+}
+
+.right {
+    width: 50%;
+}
+
+.main-text h1 {
+
+    color:#E8DFCA;
+}
+
+.main-text p {
+    color: #F5EFE6;
 }
 
 
-/* footer */
+/* FOOTER */
 footer p {
     color: black;
 }
