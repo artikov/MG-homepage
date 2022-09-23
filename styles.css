@@ -18,7 +18,6 @@ h1 {
 
 p {
     font-size: 1rem;
-    color: black;
 }
 
 .logo {
@@ -55,11 +54,15 @@ nav li a:hover {
 
 /* SECTION CONFIGURATION */
 section {
+    padding-bottom: 7rem;
     display: flex;
 }
 
 /* MAIN */
 /* Home Section */
+#home {
+    display: block;
+}
 
 .banner {
     position: relative;
@@ -70,7 +73,7 @@ section {
     width: 100%;
 }
 
-.main-text {
+.banner-text {
     width: 100%;
     top: 0;
     display: flex;
@@ -111,27 +114,32 @@ section {
     text-shadow: 1px 2px #887f6a;
 }
 
-.main-text h1 {
+.banner-text h1 {
     font-size: 2rem;
     color:#E8DFCA;
 }
 
-.main-text p {
+.banner-text p {
     color: #F5EFE6;
 }
 
+.main-text {
+    padding: 3rem 1rem;
+}
+
 /* JEWELLERY */
+
+.products-h1 {
+    padding: 1rem;
+}
 
 #jewellery {
     flex-flow:wrap;
 }
 
 .product-div {
-    /* float: left; */
-    /* margin: 1rem; */
     flex: 1 1 0;
     padding: 1rem;
-    /* width: 23%; */
 }
 
 .product-div:hover {
@@ -152,38 +160,20 @@ section {
     height: 400px;
 }
 
-/* @media only screen and (max-width: 700px) {
-    .product-div {
-      width: 43%;
-      margin: 6px 0;
-    }
-  }
-  
-@media only screen and (max-width: 500px) {
-    .product-div {
-      width: 90%;
-    }
-} */
-
 /* ORDER SECTION */
+#order {
+    flex-flow: wrap;
+}
 
 .order-col {
     flex: 1 1 0;
-    margin: 1rem;
+    padding: 1rem;
 }
 
 /* Form styling */
 .form {
-    /* width: 340px;
-    height: 440px;
-    background: #e6e6e6; */
     border-radius: 8px;
-    /* box-shadow: 0 0 40px -10px #000; */
-    /* padding: 20px 30px; */
-    /* max-width: calc(100vw - 40px); */
     box-sizing: border-box;
-    /* font-family: "Montserrat", sans-serif; */
-    /* position: relative; */
 }
 
 input {
@@ -194,7 +184,6 @@ input {
     outline: none;
     resize: none;
     border: 0;
-    font-family: "Montserrat", sans-serif;
     transition: all 0.3s;
     border-bottom: 2px solid #E8DFCA;
 }
@@ -207,7 +196,6 @@ button {
     float: right;
     padding: 8px 12px;
     margin: 8px 0 0;
-    font-family: "Montserrat", sans-serif;
     border: 2px solid #E8DFCA;
     background: 0;
     color: #887f6a;
@@ -224,7 +212,7 @@ button:hover {
 
 .about-col {
     flex: 1 1 0;
-    width: 0;
+    /* width: 0; */
     margin:1rem;
 }
 .about-img {
@@ -238,14 +226,14 @@ footer {
     padding: 1rem;
     background-color: #E8DFCA;
     display: flex;
-    width: 100%;
-}
-
-footer div {
-    flex: 1;
+    justify-content: space-between;
 }
 
 footer img {
     display: block;
     width: 100px;
+}
+
+footer p {
+    text-align: right;
 }
