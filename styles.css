@@ -18,7 +18,7 @@ h1 {
 
 p {
     font-size: 1rem;
-    color: white;
+    color: black;
 }
 
 .logo {
@@ -31,7 +31,6 @@ p {
 /* navigation bar */
 nav {
     background-color: #E8DFCA;
-    /* width: 100%; */
     margin: 1rem;
 }
 
@@ -68,7 +67,6 @@ section {
 }
 
 .banner img {
-    /* position: relative; */
     width: 100%;
 }
 
@@ -77,19 +75,44 @@ section {
     top: 0;
     display: flex;
     position: absolute;
-    background-color: #7895b24d;
+    max-height: 95%;
+    max-width: 100%;
 }
 
 .left {
     width: 50%;
+    padding: 2rem;
+    background-image: linear-gradient(#887f6a82, #887f6a00);
+}
+
+@media (max-width: 700px) {                  
+    .left {
+        width: 100%;
+        overflow: hidden;
+    }
+    .left:hover {
+        overflow: visible;
+    }
 }
 
 .right {
+    text-align: right;
     width: 50%;
+    padding: 2rem;
+}
+
+@media (max-width: 700px) {                  
+    .right {
+        display: none;
+    }
+}
+
+.right > h1 {
+    text-shadow: 1px 2px #887f6a;
 }
 
 .main-text h1 {
-
+    font-size: 2rem;
     color:#E8DFCA;
 }
 
@@ -98,22 +121,28 @@ section {
 }
 
 /* JEWELLERY */
-.products {
-    display: block;
+
+#jewellery {
+    flex-flow:wrap;
 }
 
 .product-div {
-    float: left;
-    margin: 1rem;
+    /* float: left; */
+    /* margin: 1rem; */
+    flex: 1 1 0;
     padding: 1rem;
-    width: 25%;
+    /* width: 23%; */
 }
 
 .product-div:hover {
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
-#jewellery > div > h2 {
+.gallery h2 {
+    margin: 1rem;
+}
+
+.gallery p {
     margin: 1rem;
 }
 
@@ -123,37 +152,100 @@ section {
     height: 400px;
 }
 
-@media only screen and (max-width: 700px) {
+/* @media only screen and (max-width: 700px) {
     .product-div {
-      width: 49.99999%;
+      width: 43%;
       margin: 6px 0;
     }
   }
   
 @media only screen and (max-width: 500px) {
     .product-div {
-      width: 100%;
+      width: 90%;
     }
+} */
+
+/* ORDER SECTION */
+
+.order-col {
+    flex: 1 1 0;
+    margin: 1rem;
+}
+
+/* Form styling */
+.form {
+    /* width: 340px;
+    height: 440px;
+    background: #e6e6e6; */
+    border-radius: 8px;
+    /* box-shadow: 0 0 40px -10px #000; */
+    /* padding: 20px 30px; */
+    /* max-width: calc(100vw - 40px); */
+    box-sizing: border-box;
+    /* font-family: "Montserrat", sans-serif; */
+    /* position: relative; */
+}
+
+input {
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+    background: none;
+    outline: none;
+    resize: none;
+    border: 0;
+    font-family: "Montserrat", sans-serif;
+    transition: all 0.3s;
+    border-bottom: 2px solid #E8DFCA;
+}
+
+input:focus {
+    border-bottom: 2px solid #92876e;
+}
+
+button {
+    float: right;
+    padding: 8px 12px;
+    margin: 8px 0 0;
+    font-family: "Montserrat", sans-serif;
+    border: 2px solid #E8DFCA;
+    background: 0;
+    color: #887f6a;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+button:hover {
+    background: #92876e;
+    color: #fff;
+}
+
+/* ABOUT SECTION */
+
+.about-col {
+    flex: 1 1 0;
+    width: 0;
+    margin:1rem;
+}
+.about-img {
+    width: 100%;
 }
 
 
 /* FOOTER */
-footer p {
-    color: black;
-}
+
 footer {
-    padding-top: 20px;
+    padding: 1rem;
     background-color: #E8DFCA;
     display: flex;
+    width: 100%;
 }
 
 footer div {
-    /* flex: ; */
+    flex: 1;
 }
 
 footer img {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 150px;
+    width: 100px;
 }
